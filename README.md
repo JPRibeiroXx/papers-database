@@ -10,13 +10,13 @@
 
 Built with PyQt6 and SQLite, this application provides comprehensive tools for researchers, academics, and students to organize, search, and maintain their scientific literature collections with professional-grade features and intuitive user experience.
 
-[🚀 Quick Start](#getting-started) • [📚 Documentation](#usage-guide) • [⚙️ Configuration](#configuration) • [🔧 Troubleshooting](#troubleshooting) • [📄 License](#license)
+[🚀 Quick Start](#getting-started) • [📚 Documentation](#usage-guide) • [⚙️ Configuration](#configuration) • [📄 License](#license)
 
-## ✨ Features
+## Features
 
 Papers Database delivers a comprehensive suite of literature management capabilities designed for modern research workflows.
 
-### 🔧 Core Functionality
+### Core Functionality
 
 | Feature               | Description                                                                   | Technology              |
 | --------------------- | ----------------------------------------------------------------------------- | ----------------------- |
@@ -26,34 +26,34 @@ Papers Database delivers a comprehensive suite of literature management capabili
 | **PDF Management**    | Automatic PDF linking, renaming, and organization with filesystem integration | Cross-platform file ops |
 | **Unique Naming**     | Intelligent paper identification with multiple configurable naming schemes    | Custom algorithms       |
 
-### 📊 Data Management
+### Data Management
 
-- **🔄 Flexible Schema**: Dynamic database structure that adapts to your research data
-- **📁 Category Management**: Organize papers by research areas and project categories
-- **🏷️ Auto Code Generation**: Intelligent 4-letter codes automatically generated for categories
-- **📤 Export Capabilities**: Export to CSV format and Zotero-compatible databases
-- **✅ Multi-Selection**: Select multiple papers for efficient batch operations
-- **🔒 Data Integrity**: Foreign key constraints and comprehensive validation
+- **Flexible Schema**: Dynamic database structure that adapts to your research data
+- **Category Management**: Organize papers by research areas and project categories
+- **Auto Code Generation**: Intelligent 4-letter codes automatically generated for categories
+- **Export Capabilities**: Export to CSV format and Zotero-compatible databases
+- **Multi-Selection**: Select multiple papers for efficient batch operations
+- **Data Integrity**: Foreign key constraints and comprehensive validation
 
-### 🎨 User Interface
+### User Interface
 
-- **🎯 Modern Design**: Clean, professional interface built with PyQt6 framework
-- **📱 Responsive Layout**: Adaptive table design with proper text wrapping and resizing
-- **🛡️ Read-Only Tables**: Prevents accidental data modification with controlled editing
-- **🖱️ Interactive Elements**: Clickable checkboxes for read status and direct PDF opening
-- **🌍 Cross-Platform**: Consistent user experience across Windows, macOS, and Linux
-- **⚡ Performance**: Optimized for large literature collections
+- **Modern Design**: Clean, professional interface built with PyQt6 framework
+- **Responsive Layout**: Adaptive table design with proper text wrapping and resizing
+- **Read-Only Tables**: Prevents accidental data modification with controlled editing
+- **Interactive Elements**: Clickable checkboxes for read status and direct PDF opening
+- **Cross-Platform**: Consistent user experience across Windows, macOS, and Linux
+- **Performance**: Optimized for large literature collections
 
-### 🔍 Search and Organization
+### Search and Organization
 
-- **🎯 Full-Text Search**: Search across all text fields with intelligent relevance ranking
-- **🔧 Advanced Filtering**: Filter by categories, projects, read status, and custom criteria
-- **📈 Smart Sorting**: Sort by date added, ID, relevance, or any custom field
-- **🔍 Keyword Integration**: Deep search within abstracts and titles for comprehensive results
+- **Full-Text Search**: Search across all text fields with intelligent relevance ranking
+- **Advanced Filtering**: Filter by categories, projects, read status, and custom criteria
+- **Smart Sorting**: Sort by date added, ID, relevance, or any custom field
+- **Keyword Integration**: Deep search within abstracts and titles for comprehensive results
 
-## 🚀 Getting Started
+## Getting Started
 
-### 📋 Prerequisites
+### Prerequisites
 
 Before installing Papers Database, ensure your system meets these requirements:
 
@@ -70,7 +70,7 @@ Before installing Papers Database, ensure your system meets these requirements:
 - Git for repository cloning
 - Administrative privileges for installation
 
-### 📦 Installation
+### Installation
 
 Choose your preferred installation method:
 
@@ -123,13 +123,13 @@ pip install -r requirements.txt
 mkdir -p PDFs logs
 ```
 
-### ⚙️ Configuration
+### Configuration
 
 #### Initial Setup and First Launch
 
 Follow these steps to configure Papers Database for optimal performance:
 
-##### 1. 📁 PDF Storage Configuration
+##### 1. PDF Storage Configuration
 
 **Critical First Step:** Configure your PDF storage directory before first launch.
 
@@ -145,7 +145,7 @@ mkdir ~/Documents/PaperDB_PDFs  # Recommended location
 - ✅ Ensure write permissions to the selected directory
 - 📝 Remember this path for application configuration
 
-##### 2. 🗄️ Database Initialization
+##### 2. Database Initialization
 
 Papers Database automatically handles database setup:
 
@@ -154,7 +154,7 @@ Papers Database automatically handles database setup:
 - **Schema**: Dynamic schema adapts to your research needs
 - **Indexing**: FTS5 search indexes created automatically
 
-##### 3. 🔧 Application Launch
+##### 3. Application Launch
 
 ```bash
 # Navigate to application directory
@@ -175,31 +175,31 @@ python -m app.main
 2. Configure basic preferences
 3. Import existing data (optional)
 
-## 📁 Project Structure
+## Project Structure
 
 Papers Database follows a modular architecture designed for maintainability and extensibility:
 
 ```
 papers-database/
-├── 📱 papers-desktop-app/           # Main application directory
-│   ├── 🔧 app/                      # Core application modules
+├── papers-desktop-app/              # Main application directory
+│   ├── app/                         # Core application modules
 │   │   ├── __init__.py              # Package initialization
-│   │   ├── main.py                  # 🎯 Main application window & UI logic
-│   │   ├── db.py                    # 🗄️ Database operations & schema management
-│   │   ├── lookups.py               # 📊 Category and project management
-│   │   ├── unique.py                # 🏷️ Unique naming algorithms
-│   │   └── settings.py              # ⚙️ Configuration management
-│   ├── 📋 requirements.txt          # Python dependencies specification
-│   ├── 📦 setup.py                  # Package configuration for distribution
-│   └── 🚀 install.sh                # Automated installation script
-├── 📄 PDFs/                         # PDF storage directory (created by user)
-├── 📝 logs/                         # Application logs and debug information
-├── 📖 README.md                     # This documentation file
-├── 📜 LICENSE                       # License terms and conditions
-└── 🚫 .gitignore                   # Git ignore patterns for data privacy
+│   │   ├── main.py                  # Main application window & UI logic
+│   │   ├── db.py                    # Database operations & schema management
+│   │   ├── lookups.py               # Category and project management
+│   │   ├── unique.py                # Unique naming algorithms
+│   │   └── settings.py              # Configuration management
+│   ├── requirements.txt             # Python dependencies specification
+│   ├── setup.py                     # Package configuration for distribution
+│   └── install.sh                   # Automated installation script
+├── PDFs/                            # PDF storage directory (created by user)
+├── logs/                            # Application logs and debug information
+├── README.md                        # This documentation file
+├── LICENSE                          # License terms and conditions
+└── .gitignore                       # Git ignore patterns for data privacy
 ```
 
-### 🔧 Architecture Overview
+### Architecture Overview
 
 | Component           | Purpose                            | Technology Stack           |
 | ------------------- | ---------------------------------- | -------------------------- |
@@ -208,9 +208,9 @@ papers-database/
 | **Database**        | Data storage and search            | SQLite with FTS5 extension |
 | **File Management** | PDF organization and linking       | Python os, shutil modules  |
 
-## ⚙️ Advanced Configuration
+## Advanced Configuration
 
-### 🌍 Environment Variables
+### Environment Variables
 
 Configure Papers Database behavior using environment variables:
 
@@ -221,7 +221,7 @@ Configure Papers Database behavior using environment variables:
 | `LOG_LEVEL`       | Logging verbosity level            | `INFO`        | `DEBUG`, `WARNING`, `ERROR` |
 | `BACKUP_INTERVAL` | Automatic backup frequency (hours) | `24`          | `12`, `6`                   |
 
-### 🎛️ Application Settings
+### Application Settings
 
 Fine-tune your Papers Database experience:
 
@@ -246,11 +246,11 @@ Fine-tune your Papers Database experience:
 - **Theme Options**: Adjust color schemes and font preferences
 - **Workflow**: Customize default behaviors and shortcuts
 
-## 📚 Usage Guide
+## Usage Guide
 
 Master Papers Database with these comprehensive workflow guides designed for researchers at all levels.
 
-### ➕ Adding Papers
+### Adding Papers
 
 Papers Database supports multiple methods for adding research papers to your collection:
 
@@ -296,7 +296,7 @@ Papers Database supports multiple methods for adding research papers to your col
 4. Automatic file organization and linking
 ```
 
-### 📁 Managing Categories and Projects
+### Managing Categories and Projects
 
 Organize your research with intelligent categorization:
 
@@ -325,12 +325,12 @@ Access: Tools > Manage Categories
 Access: Tools > Manage Projects
 ```
 
-- 📋 Link papers to specific research projects
-- 🔗 Cross-reference related work
-- 📊 Generate project-based reports
-- 🎯 Filter by project assignments
+- Link papers to specific research projects
+- Cross-reference related work
+- Generate project-based reports
+- Filter by project assignments
 
-### 🔍 Advanced Search Operations
+### Advanced Search Operations
 
 Papers Database provides powerful search capabilities for efficient literature discovery:
 
@@ -369,7 +369,7 @@ Searchable Content: All text fields, PDF content (if extracted)
 - Combine terms with AND/OR: `neural AND networks`
 - Use wildcards for partial matches: `bio*`
 
-### 📤 Data Export and Integration
+### Data Export and Integration
 
 #### CSV Export
 
@@ -447,46 +447,7 @@ The application supports multiple naming schemes for paper identification:
 - **Search Speed**: Indexed fields for rapid query execution
 - **File Access**: Optimized PDF file access and management
 
-## Troubleshooting
-
-### Common Issues
-
-#### Application Won't Start
-
-- Verify Python 3.8+ installation
-- Check virtual environment activation
-- Ensure all dependencies are installed
-- Review error logs in `logs/` directory
-
-#### PDF Upload Issues
-
-- Verify PDF file integrity
-- Check file permissions in PDFs directory
-- Ensure sufficient disk space
-- Validate PDF file format compatibility
-
-#### Search Problems
-
-- Rebuild search index if needed
-- Check database file permissions
-- Verify text encoding in imported data
-- Clear and regenerate search cache
-
-#### Performance Issues
-
-- Optimize database with VACUUM command
-- Check available system memory
-- Review log files for errors
-- Consider database optimization
-
-### Error Resolution
-
-- **Database Errors**: Check file permissions and disk space
-- **PDF Issues**: Verify file integrity and storage location
-- **Import Problems**: Validate Excel file format and data structure
-- **Search Issues**: Rebuild full-text search index
-
-## 📄 License
+## License
 
 This software is distributed under a **Custom License** designed to support educational and research use while protecting intellectual property.
 
@@ -510,7 +471,7 @@ This software is distributed under a **Custom License** designed to support educ
 - **Contact Required**: Commercial use requires prior written authorization
 - **Liability Limitation**: Authors not liable for any damages or data loss
 
-## 🤝 Contributing
+## Contributing
 
 Papers Database is currently maintained as a **personal research tool** with focused development goals.
 
@@ -528,97 +489,17 @@ Papers Database is currently maintained as a **personal research tool** with foc
 
 **Contact**: For collaboration inquiries or feature requests, please refer to the support section below.
 
-## 🆘 Support
+## Support
 
-Get help with Papers Database through these comprehensive support channels:
+For technical support or questions:
 
-### 📚 Self-Service Resources
-
-1. **📖 Documentation Review**
-
-   - Read this README thoroughly
-   - Check all sections relevant to your issue
-   - Review configuration examples and code snippets
-
-2. **🔧 Troubleshooting Guide**
-
-   - Consult the [Troubleshooting](#-troubleshooting) section
-   - Follow step-by-step diagnostic procedures
-   - Check common issues and their solutions
-
-3. **📝 Log Analysis**
-   - Examine application logs in `logs/` directory
-   - Look for error messages and stack traces
-   - Check system resource usage and permissions
-
-### 🏥 Advanced Support
-
-If self-service resources don't resolve your issue:
-
-1. **📋 System Information**
-
-   - Verify system requirements are met
-   - Check Python version and dependencies
-   - Confirm file system permissions
-
-2. **🔍 Issue Documentation**
-
-   - Document exact steps to reproduce the problem
-   - Include error messages and log excerpts
-   - Note system configuration and environment details
-
-3. **💡 Community Resources**
-   - Search for similar issues in documentation
-   - Check academic forums for related discussions
-   - Consult PyQt6 and SQLite documentation for technical details
-
-### 📧 Contact Information
-
-For persistent issues or feature requests:
-
+- **Documentation**: Review this README thoroughly for comprehensive guidance
 - **Email**: Contact information available in LICENSE file
 - **Response Time**: Academic/educational users prioritized
 - **Issue Types**: Bug reports, feature requests, compatibility questions
+- **LinkedIn**: Connect with the developer at [@joaosribeiro99](https://www.linkedin.com/in/joaosribeiro99/)
 
-## 🚀 Future Enhancements
 
-Papers Database continues to evolve based on user feedback and research community needs.
-
-### 🎯 Planned Features (Version 2.0)
-
-| Feature                | Priority | Timeline | Description                               |
-| ---------------------- | -------- | -------- | ----------------------------------------- |
-| **☁️ Cloud Sync**      | High     | Q2 2025  | Optional cloud backup and synchronization |
-| **📊 Analytics**       | Medium   | Q3 2025  | Citation analysis and research metrics    |
-| **🤝 Collaboration**   | Medium   | Q4 2025  | Shared libraries and annotations          |
-| **📱 Mobile App**      | Low      | 2026     | Companion mobile application              |
-| **🔌 API Integration** | High     | Q3 2025  | Academic database connectivity            |
-
-### 📈 Development Roadmap
-
-#### Version 2.0 - Enhanced Intelligence
-
-- 🔍 **Advanced Search**: ML-powered search with semantic understanding
-- 📊 **Smart Analytics**: Automated research trend analysis
-- 🎯 **Recommendation Engine**: Intelligent paper suggestions
-
-#### Version 2.1 - Content Processing
-
-- 📄 **PDF Processing**: Advanced text extraction and analysis
-- 🔤 **OCR Integration**: Support for scanned documents
-- 🏷️ **Auto-Tagging**: Intelligent keyword and category assignment
-
-#### Version 2.2 - External Integration
-
-- 🌐 **Database Connectivity**: Direct integration with PubMed, arXiv, IEEE
-- 📚 **Reference Management**: Enhanced citation and bibliography tools
-- 🔄 **Import/Export**: Support for additional academic formats
-
-#### Version 3.0 - Collaboration Platform
-
-- 👥 **Team Features**: Multi-user libraries and shared collections
-- 💬 **Annotation System**: Collaborative notes and discussions
-- 🌍 **Web Interface**: Browser-based access and sharing
 
 ---
 
@@ -634,6 +515,6 @@ Papers Database continues to evolve based on user feedback and research communit
 
 _Advancing scientific research through efficient literature management_
 
-**Last Updated**: January 2025 | **Version**: 1.0.0 | **License**: Custom Academic License
+**Last Updated**: September 2025 | **Version**: 1.0.0 | **License**: Custom Academic License
 
 </div>
