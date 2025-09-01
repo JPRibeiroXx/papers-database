@@ -1,0 +1,124 @@
+# Personal Data and Application Files
+PDFs/
+*.db
+*.db-journal
+*.db-backup
+*.db-wal
+*.db-shm
+papers.db
+test_papers.db
+user_settings.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# PyQt6
+*.ui
+*.qrc
+*.qm
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+app.log
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Application Launchers (keep source, ignore compiled)
+*.app/
+*.exe
+*.dmg
+*.pkg
+
+# Backup and Migration Files
+migration_backup/
+*.backup
+*.old
+
+# Test and Development Files
+test_*.py
+*_test.py
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Documentation Build
+docs/_build/
+docs/build/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# User-specific Configuration
+config.ini
+user_config.json
+local_settings.py
+
+# Database Dumps and Exports
+*.sql
+*.dump
+export_*.zip
+zotero_export/
+
+# PDF Processing Temporary Files
+temp_pdfs/
+processing/
+*.tmp.pdf
+
+# Application State and Cache
+.cache/
+app_cache/
+state.json
+session_data/
