@@ -1,174 +1,402 @@
 # Papers Database - Scientific Literature Management System
 
-A powerful, cross-platform desktop application for managing scientific papers, research articles, and academic literature. Built with PyQt6 and SQLite, this application provides comprehensive tools for researchers, academics, and students to organize, search, and maintain their scientific literature collections.
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/license-Custom-red.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)]()
+[![PyQt6](https://img.shields.io/badge/UI-PyQt6-green.svg)](https://www.riverbankcomputing.com/software/pyqt/)
+[![SQLite](https://img.shields.io/badge/database-SQLite-blue.svg)](https://sqlite.org/)
 
-_Papers Database - Making scientific literature management simple and efficient._
+**A powerful, cross-platform desktop application for managing scientific papers, research articles, and academic literature.**
 
-## Features
+Built with PyQt6 and SQLite, this application provides comprehensive tools for researchers, academics, and students to organize, search, and maintain their scientific literature collections with professional-grade features and intuitive user experience.
 
-### Core Functionality
+[🚀 Quick Start](#getting-started) • [📚 Documentation](#usage-guide) • [⚙️ Configuration](#configuration) • [🔧 Troubleshooting](#troubleshooting) • [📄 License](#license)
 
-- **Complete CRUD Operations**: Create, read, update, and delete paper records with intuitive interfaces
-- **Advanced Search**: Full-text search across titles, abstracts, and content with FTS5 indexing
-- **Excel Import**: Bulk import from Excel files with automatic column mapping and data normalization
-- **PDF Management**: Automatic PDF linking, renaming, and organization
-- **Unique Naming System**: Intelligent paper identification with multiple naming schemes
+## ✨ Features
 
-### Data Management
+Papers Database delivers a comprehensive suite of literature management capabilities designed for modern research workflows.
 
-- **Flexible Schema**: Dynamic database structure that adapts to your data
-- **Category Management**: Organize papers by research areas and project categories
-- **Automatic Code Generation**: Intelligent 4-letter codes for categories and projects
-- **Data Export**: Export to CSV format and Zotero-compatible databases
-- **Multi-Selection Support**: Select multiple papers for batch operations
+### 🔧 Core Functionality
 
-### User Interface
+| Feature               | Description                                                                   | Technology              |
+| --------------------- | ----------------------------------------------------------------------------- | ----------------------- |
+| **CRUD Operations**   | Complete Create, Read, Update, Delete operations with intuitive interfaces    | PyQt6 Forms             |
+| **Advanced Search**   | Full-text search across titles, abstracts, and content with relevance ranking | SQLite FTS5             |
+| **Excel Integration** | Bulk import from Excel files with automatic column mapping and normalization  | pandas, openpyxl        |
+| **PDF Management**    | Automatic PDF linking, renaming, and organization with filesystem integration | Cross-platform file ops |
+| **Unique Naming**     | Intelligent paper identification with multiple configurable naming schemes    | Custom algorithms       |
 
-- **Modern Design**: Clean, professional interface built with PyQt6
-- **Responsive Layout**: Adaptive table design with proper text wrapping
-- **Read-Only Tables**: Prevents accidental data modification
-- **Interactive Elements**: Clickable checkboxes for read status and PDF opening
-- **Cross-Platform**: Consistent experience across Windows, macOS, and Linux
+### 📊 Data Management
 
-### Search and Organization
+- **🔄 Flexible Schema**: Dynamic database structure that adapts to your research data
+- **📁 Category Management**: Organize papers by research areas and project categories
+- **🏷️ Auto Code Generation**: Intelligent 4-letter codes automatically generated for categories
+- **📤 Export Capabilities**: Export to CSV format and Zotero-compatible databases
+- **✅ Multi-Selection**: Select multiple papers for efficient batch operations
+- **🔒 Data Integrity**: Foreign key constraints and comprehensive validation
 
-- **Full-Text Search**: Search across all text fields with relevance ranking
-- **Filtering Options**: Filter by categories, projects, read status, and more
-- **Sorting Capabilities**: Sort by date added, ID, or other criteria
-- **Keyword Integration**: Search within abstracts and titles for comprehensive results
+### 🎨 User Interface
 
-## Getting Started
+- **🎯 Modern Design**: Clean, professional interface built with PyQt6 framework
+- **📱 Responsive Layout**: Adaptive table design with proper text wrapping and resizing
+- **🛡️ Read-Only Tables**: Prevents accidental data modification with controlled editing
+- **🖱️ Interactive Elements**: Clickable checkboxes for read status and direct PDF opening
+- **🌍 Cross-Platform**: Consistent user experience across Windows, macOS, and Linux
+- **⚡ Performance**: Optimized for large literature collections
 
-### Prerequisites
+### 🔍 Search and Organization
 
-- Python 3.8 or higher
-- 4GB RAM minimum (8GB recommended)
-- 500MB available disk space
-- PDF viewer application
+- **🎯 Full-Text Search**: Search across all text fields with intelligent relevance ranking
+- **🔧 Advanced Filtering**: Filter by categories, projects, read status, and custom criteria
+- **📈 Smart Sorting**: Sort by date added, ID, relevance, or any custom field
+- **🔍 Keyword Integration**: Deep search within abstracts and titles for comprehensive results
 
-### Installation
+## 🚀 Getting Started
+
+### 📋 Prerequisites
+
+Before installing Papers Database, ensure your system meets these requirements:
+
+| Requirement | Minimum                               | Recommended     |
+| ----------- | ------------------------------------- | --------------- |
+| **Python**  | 3.8+                                  | 3.9+            |
+| **RAM**     | 4GB                                   | 8GB             |
+| **Storage** | 500MB                                 | 2GB             |
+| **OS**      | Windows 10, macOS 10.14, Ubuntu 18.04 | Latest versions |
+
+**Additional Requirements:**
+
+- PDF viewer application (system default or Adobe Reader)
+- Git for repository cloning
+- Administrative privileges for installation
+
+### 📦 Installation
+
+Choose your preferred installation method:
 
 #### Option 1: Automated Installation (Recommended)
 
+The automated installation script handles all dependencies and configuration:
+
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd PaperDB
+git clone https://github.com/JPRibeiroXx/papers-database.git
+cd papers-database
 
-# Run the installation script
+# Make installation script executable
 chmod +x install.sh
+
+# Run automated installation
 ./install.sh
 ```
 
+The script will:
+
+- ✅ Check Python version compatibility
+- ✅ Create and configure virtual environment
+- ✅ Install all required dependencies
+- ✅ Set up directory structure
+- ✅ Configure initial settings
+
 #### Option 2: Manual Installation
 
-```bash
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+For advanced users who prefer manual control:
 
-# Install dependencies
+```bash
+# Clone the repository
+git clone https://github.com/JPRibeiroXx/papers-database.git
+cd papers-database
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+source venv/bin/activate  # Linux/macOS
+# or
+venv\Scripts\activate     # Windows
+
+# Upgrade pip and install dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
 
 # Create necessary directories
-mkdir PDFs logs
+mkdir -p PDFs logs
 ```
 
-### Configuration
+### ⚙️ Configuration
 
-#### First Launch Setup
+#### Initial Setup and First Launch
 
-1. **Create PDFs Directory**: The application requires a dedicated folder for PDF storage
+Follow these steps to configure Papers Database for optimal performance:
 
-   - Create a `PDFs` folder in your desired location
-   - This folder will store all paper PDFs with organized naming
+##### 1. 📁 PDF Storage Configuration
 
-2. **Database Initialization**: The application automatically creates `papers.db` on first launch
-
-   - Database file is created in the application directory
-   - No manual database setup required
-
-3. **Settings Configuration**: Application settings are stored in `user_settings.ini`
-   - PDF root directory path
-   - Database location
-   - User preferences
-
-### First Launch
+**Critical First Step:** Configure your PDF storage directory before first launch.
 
 ```bash
-# Navigate to the application directory
-cd papers-desktop-app
+# Create your PDF storage directory
+mkdir ~/Documents/PaperDB_PDFs  # Recommended location
+# or choose your preferred location
+```
 
-# Launch the application
+**Important Notes:**
+
+- ⚠️ Choose a location with sufficient storage space (minimum 2GB recommended)
+- ✅ Ensure write permissions to the selected directory
+- 📝 Remember this path for application configuration
+
+##### 2. 🗄️ Database Initialization
+
+Papers Database automatically handles database setup:
+
+- **Automatic Creation**: `papers.db` is created on first launch
+- **Location**: Application directory (configurable)
+- **Schema**: Dynamic schema adapts to your research needs
+- **Indexing**: FTS5 search indexes created automatically
+
+##### 3. 🔧 Application Launch
+
+```bash
+# Navigate to application directory
+cd papers-database/papers-desktop-app
+
+# Activate virtual environment (if not already active)
+source ../venv/bin/activate  # Linux/macOS
+# or
+..\venv\Scripts\activate     # Windows
+
+# Launch Papers Database
 python -m app.main
 ```
 
-## Project Structure
+**On first launch, you'll be prompted to:**
+
+1. Select your PDF storage directory
+2. Configure basic preferences
+3. Import existing data (optional)
+
+## 📁 Project Structure
+
+Papers Database follows a modular architecture designed for maintainability and extensibility:
 
 ```
-PaperDB/
-├── papers-desktop-app/
-│   ├── app/
-│   │   ├── __init__.py
-│   │   ├── main.py              # Main application window
-│   │   ├── db.py                # Database operations
-│   │   ├── lookups.py           # Category and project management
-│   │   ├── unique.py            # Unique naming algorithms
-│   │   └── settings.py          # Application configuration
-│   ├── requirements.txt          # Python dependencies
-│   ├── setup.py                 # Package configuration
-│   └── install.sh               # Installation script
-├── PDFs/                        # PDF storage directory
-├── logs/                        # Application logs
-├── README.md                    # This file
-├── LICENSE                      # License information
-└── .gitignore                  # Git ignore patterns
+papers-database/
+├── 📱 papers-desktop-app/           # Main application directory
+│   ├── 🔧 app/                      # Core application modules
+│   │   ├── __init__.py              # Package initialization
+│   │   ├── main.py                  # 🎯 Main application window & UI logic
+│   │   ├── db.py                    # 🗄️ Database operations & schema management
+│   │   ├── lookups.py               # 📊 Category and project management
+│   │   ├── unique.py                # 🏷️ Unique naming algorithms
+│   │   └── settings.py              # ⚙️ Configuration management
+│   ├── 📋 requirements.txt          # Python dependencies specification
+│   ├── 📦 setup.py                  # Package configuration for distribution
+│   └── 🚀 install.sh                # Automated installation script
+├── 📄 PDFs/                         # PDF storage directory (created by user)
+├── 📝 logs/                         # Application logs and debug information
+├── 📖 README.md                     # This documentation file
+├── 📜 LICENSE                       # License terms and conditions
+└── 🚫 .gitignore                   # Git ignore patterns for data privacy
 ```
 
-## Configuration
+### 🔧 Architecture Overview
 
-### Environment Variables
+| Component           | Purpose                            | Technology Stack           |
+| ------------------- | ---------------------------------- | -------------------------- |
+| **Frontend**        | User interface and interaction     | PyQt6, Qt Designer         |
+| **Backend**         | Data processing and business logic | Python 3.8+, SQLite        |
+| **Database**        | Data storage and search            | SQLite with FTS5 extension |
+| **File Management** | PDF organization and linking       | Python os, shutil modules  |
 
-- `PDF_ROOT`: Path to PDF storage directory
-- `DB_PATH`: Custom database file location
-- `LOG_LEVEL`: Logging verbosity (DEBUG, INFO, WARNING, ERROR)
+## ⚙️ Advanced Configuration
 
-### Application Settings
+### 🌍 Environment Variables
 
-- **PDF Management**: Configure PDF storage location and naming conventions
-- **Database Options**: Set database path and backup preferences
-- **Interface Preferences**: Customize table columns and display options
-- **Search Settings**: Configure search algorithms and result limits
+Configure Papers Database behavior using environment variables:
 
-## Usage Guide
+| Variable          | Description                        | Default       | Example                     |
+| ----------------- | ---------------------------------- | ------------- | --------------------------- |
+| `PDF_ROOT`        | Path to PDF storage directory      | `./PDFs/`     | `/home/user/research/pdfs/` |
+| `DB_PATH`         | Custom database file location      | `./papers.db` | `/data/research.db`         |
+| `LOG_LEVEL`       | Logging verbosity level            | `INFO`        | `DEBUG`, `WARNING`, `ERROR` |
+| `BACKUP_INTERVAL` | Automatic backup frequency (hours) | `24`          | `12`, `6`                   |
 
-### Adding Papers
+### 🎛️ Application Settings
 
-1. **Manual Entry**: Use the "Add Record" button for individual papers
-2. **PDF Upload**: Attach PDFs during record creation for automatic organization
-3. **Excel Import**: Bulk import from existing Excel databases
-4. **Data Validation**: Automatic validation of required fields
+Fine-tune your Papers Database experience:
 
-### Managing Categories
+#### PDF Management
 
-1. **Access Management**: Tools > Manage Categories
-2. **Add Categories**: Create new research area classifications
-3. **Auto-Code Generation**: 4-letter codes automatically generated from names
-4. **Edit/Delete**: Modify existing categories as needed
+- **Storage Location**: Configure PDF directory path and organization
+- **Naming Conventions**: Choose from multiple unique naming schemes
+- **File Validation**: Enable automatic PDF integrity checking
+- **Backup Strategy**: Configure automatic PDF backup policies
 
-### Search Operations
+#### Database Options
 
-1. **Quick Search**: Use the search bar for immediate results
-2. **Advanced Filters**: Combine multiple search criteria
-3. **Full-Text Search**: Search within paper content and abstracts
-4. **Result Management**: Sort, filter, and export search results
+- **Location**: Set custom database file path
+- **Backup Settings**: Configure automatic backup frequency and retention
+- **Performance**: Adjust cache sizes and query optimization
+- **Indexing**: Configure full-text search indexing behavior
 
-### Data Export
+#### Interface Preferences
 
-1. **CSV Export**: Export selected papers to CSV format
-2. **Zotero Integration**: Export to Zotero-compatible database
-3. **PDF Inclusion**: Include associated PDFs in exports
-4. **Batch Operations**: Export multiple papers simultaneously
+- **Table Layout**: Customize visible columns and display order
+- **Search Settings**: Configure search result limits and ranking
+- **Theme Options**: Adjust color schemes and font preferences
+- **Workflow**: Customize default behaviors and shortcuts
+
+## 📚 Usage Guide
+
+Master Papers Database with these comprehensive workflow guides designed for researchers at all levels.
+
+### ➕ Adding Papers
+
+Papers Database supports multiple methods for adding research papers to your collection:
+
+#### Method 1: Manual Entry
+
+```
+1. Click "Add Record" button in the main toolbar
+2. Fill in paper details (title, authors, abstract, etc.)
+3. Optionally upload PDF file for automatic organization
+4. Click "Save" to add paper to your database
+```
+
+**Features:**
+
+- ✅ Real-time validation of required fields
+- 🎯 Auto-suggestion for existing categories
+- 📄 PDF upload with automatic renaming
+- 🏷️ Unique identifier generation
+
+#### Method 2: Excel Bulk Import
+
+```
+1. Navigate to File > Import > Excel
+2. Select your Excel file containing paper data
+3. Map columns to database fields
+4. Preview and validate import data
+5. Execute bulk import operation
+```
+
+**Supported Excel Features:**
+
+- 📊 Automatic column detection and mapping
+- 🔄 Data normalization and cleanup
+- ⚠️ Error detection and reporting
+- 📈 Progress tracking for large imports
+
+#### Method 3: PDF with Metadata Extraction
+
+```
+1. Drag and drop PDF files into the application
+2. Automatic metadata extraction where possible
+3. Manual verification and completion of fields
+4. Automatic file organization and linking
+```
+
+### 📁 Managing Categories and Projects
+
+Organize your research with intelligent categorization:
+
+#### Category Management
+
+```
+Access: Tools > Manage Categories
+```
+
+**Operations Available:**
+
+- ➕ **Add New Categories**: Create research area classifications
+- 🏷️ **Auto-Code Generation**: 4-letter codes automatically generated from category names
+- ✏️ **Edit Categories**: Modify existing category names and codes
+- 🗑️ **Delete Categories**: Remove unused categories (with safety checks)
+
+**Example Category Generation:**
+
+- "Machine Learning" → **MALE**
+- "Biomedical Engineering" → **BIEG**
+- "Quantum Computing" → **QUNG**
+
+#### Project Organization
+
+```
+Access: Tools > Manage Projects
+```
+
+- 📋 Link papers to specific research projects
+- 🔗 Cross-reference related work
+- 📊 Generate project-based reports
+- 🎯 Filter by project assignments
+
+### 🔍 Advanced Search Operations
+
+Papers Database provides powerful search capabilities for efficient literature discovery:
+
+#### Quick Search
+
+```
+Location: Main search bar (top of interface)
+Scope: Titles, authors, keywords, abstracts
+```
+
+#### Advanced Search Builder
+
+```
+Access: Search > Advanced Search
+```
+
+**Available Filters:**
+
+- 📅 **Date Range**: Filter by publication or addition date
+- 👥 **Authors**: Search by specific author names
+- 📖 **Categories**: Filter by research area classifications
+- 🏷️ **Projects**: Show papers from specific projects
+- ✅ **Read Status**: Filter by read/unread status
+- 📄 **Has PDF**: Show only papers with attached PDFs
+
+#### Full-Text Search
+
+```
+Technology: SQLite FTS5 with relevance ranking
+Searchable Content: All text fields, PDF content (if extracted)
+```
+
+**Search Tips:**
+
+- Use quotes for exact phrases: `"machine learning"`
+- Combine terms with AND/OR: `neural AND networks`
+- Use wildcards for partial matches: `bio*`
+
+### 📤 Data Export and Integration
+
+#### CSV Export
+
+```
+1. Select papers in main table (Ctrl+Click for multiple)
+2. Navigate to File > Export > CSV
+3. Choose export fields and format options
+4. Select destination file
+5. Execute export operation
+```
+
+#### Zotero Integration
+
+```
+1. Select papers for export
+2. Choose File > Export > Zotero Database
+3. Select export location
+4. Choose to include PDFs (optional)
+5. Generate Zotero-compatible database
+```
+
+**Export Features:**
+
+- 🎯 **Selective Export**: Choose specific papers or collections
+- 📄 **PDF Inclusion**: Optionally include PDF files in export
+- 🔧 **Format Options**: Multiple export formats supported
+- ✅ **Validation**: Export validation and error checking
 
 ## Advanced Features
 
@@ -258,49 +486,154 @@ The application supports multiple naming schemes for paper identification:
 - **Import Problems**: Validate Excel file format and data structure
 - **Search Issues**: Rebuild full-text search index
 
-## License
+## 📄 License
 
-This software is licensed under a custom license that permits personal and educational use. See the `LICENSE` file for complete terms and conditions.
+This software is distributed under a **Custom License** designed to support educational and research use while protecting intellectual property.
 
-**Key Restrictions:**
+### License Summary
 
-- Personal use only
-- No redistribution
-- No modification
-- No commercial use without permission
+| Permission              | Status     | Description                                           |
+| ----------------------- | ---------- | ----------------------------------------------------- |
+| ✅ **Personal Use**     | Allowed    | Use for individual research and academic work         |
+| ✅ **Educational Use**  | Allowed    | Use in academic institutions and educational settings |
+| ❌ **Commercial Use**   | Restricted | Requires explicit written permission                  |
+| ❌ **Redistribution**   | Prohibited | Cannot share or distribute copies                     |
+| ❌ **Modification**     | Restricted | Code modifications not permitted                      |
+| ❌ **Derivative Works** | Prohibited | Cannot create derived software                        |
 
-## Contributing
+📜 **Full License Terms**: See [`LICENSE`](LICENSE) file for complete terms and conditions.
 
-This is a personal research tool. Contributions are not currently accepted for public distribution.
+### Important Notes
 
-## Support
+- **As-Is Provision**: Software provided without warranty or guarantee
+- **Educational Priority**: Designed specifically for academic and research environments
+- **Contact Required**: Commercial use requires prior written authorization
+- **Liability Limitation**: Authors not liable for any damages or data loss
 
-For technical support or questions:
+## 🤝 Contributing
 
-- Review this documentation thoroughly
-- Check the troubleshooting section
-- Examine application logs for error details
-- Ensure proper system requirements
+Papers Database is currently maintained as a **personal research tool** with focused development goals.
 
-## Future Enhancements
+### Current Status
 
-### Planned Features
+- 🔒 **Closed Source**: Not accepting public contributions at this time
+- 🎯 **Focused Development**: Maintaining specific research workflow optimization
+- 📧 **Feedback Welcome**: Bug reports and feature suggestions appreciated
 
-- **Cloud Synchronization**: Optional cloud backup and sync
-- **Advanced Analytics**: Citation analysis and research metrics
-- **Collaborative Features**: Shared libraries and annotations
-- **Mobile Application**: Companion mobile app for field research
-- **API Integration**: Connect with academic databases and repositories
+### Future Plans
 
-### Development Roadmap
+- 📈 **Community Version**: Considering open-source release for future versions
+- 🤝 **Collaboration**: Potential academic partnerships under evaluation
+- 🔧 **Plugin System**: Planned extensibility for custom integrations
 
-- **Version 2.0**: Enhanced search and filtering capabilities
-- **Version 2.1**: Advanced PDF processing and text extraction
-- **Version 2.2**: Integration with academic databases
-- **Version 3.0**: Cloud-based collaboration features
+**Contact**: For collaboration inquiries or feature requests, please refer to the support section below.
+
+## 🆘 Support
+
+Get help with Papers Database through these comprehensive support channels:
+
+### 📚 Self-Service Resources
+
+1. **📖 Documentation Review**
+
+   - Read this README thoroughly
+   - Check all sections relevant to your issue
+   - Review configuration examples and code snippets
+
+2. **🔧 Troubleshooting Guide**
+
+   - Consult the [Troubleshooting](#-troubleshooting) section
+   - Follow step-by-step diagnostic procedures
+   - Check common issues and their solutions
+
+3. **📝 Log Analysis**
+   - Examine application logs in `logs/` directory
+   - Look for error messages and stack traces
+   - Check system resource usage and permissions
+
+### 🏥 Advanced Support
+
+If self-service resources don't resolve your issue:
+
+1. **📋 System Information**
+
+   - Verify system requirements are met
+   - Check Python version and dependencies
+   - Confirm file system permissions
+
+2. **🔍 Issue Documentation**
+
+   - Document exact steps to reproduce the problem
+   - Include error messages and log excerpts
+   - Note system configuration and environment details
+
+3. **💡 Community Resources**
+   - Search for similar issues in documentation
+   - Check academic forums for related discussions
+   - Consult PyQt6 and SQLite documentation for technical details
+
+### 📧 Contact Information
+
+For persistent issues or feature requests:
+
+- **Email**: Contact information available in LICENSE file
+- **Response Time**: Academic/educational users prioritized
+- **Issue Types**: Bug reports, feature requests, compatibility questions
+
+## 🚀 Future Enhancements
+
+Papers Database continues to evolve based on user feedback and research community needs.
+
+### 🎯 Planned Features (Version 2.0)
+
+| Feature                | Priority | Timeline | Description                               |
+| ---------------------- | -------- | -------- | ----------------------------------------- |
+| **☁️ Cloud Sync**      | High     | Q2 2025  | Optional cloud backup and synchronization |
+| **📊 Analytics**       | Medium   | Q3 2025  | Citation analysis and research metrics    |
+| **🤝 Collaboration**   | Medium   | Q4 2025  | Shared libraries and annotations          |
+| **📱 Mobile App**      | Low      | 2026     | Companion mobile application              |
+| **🔌 API Integration** | High     | Q3 2025  | Academic database connectivity            |
+
+### 📈 Development Roadmap
+
+#### Version 2.0 - Enhanced Intelligence
+
+- 🔍 **Advanced Search**: ML-powered search with semantic understanding
+- 📊 **Smart Analytics**: Automated research trend analysis
+- 🎯 **Recommendation Engine**: Intelligent paper suggestions
+
+#### Version 2.1 - Content Processing
+
+- 📄 **PDF Processing**: Advanced text extraction and analysis
+- 🔤 **OCR Integration**: Support for scanned documents
+- 🏷️ **Auto-Tagging**: Intelligent keyword and category assignment
+
+#### Version 2.2 - External Integration
+
+- 🌐 **Database Connectivity**: Direct integration with PubMed, arXiv, IEEE
+- 📚 **Reference Management**: Enhanced citation and bibliography tools
+- 🔄 **Import/Export**: Support for additional academic formats
+
+#### Version 3.0 - Collaboration Platform
+
+- 👥 **Team Features**: Multi-user libraries and shared collections
+- 💬 **Annotation System**: Collaborative notes and discussions
+- 🌍 **Web Interface**: Browser-based access and sharing
 
 ---
 
-**Papers Database** - Empowering researchers with efficient literature management tools.
+<div align="center">
 
-_Last updated: January 2025_
+## Papers Database
+
+**Empowering researchers with intelligent literature management**
+
+[![Made with Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Built with PyQt6](https://img.shields.io/badge/Built%20with-PyQt6-41CD52.svg)](https://www.riverbankcomputing.com/software/pyqt/)
+[![Powered by SQLite](https://img.shields.io/badge/Powered%20by-SQLite-003B57.svg)](https://sqlite.org/)
+
+_Advancing scientific research through efficient literature management_
+
+**Last Updated**: January 2025 | **Version**: 1.0.0 | **License**: Custom Academic License
+
+</div>
